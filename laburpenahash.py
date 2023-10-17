@@ -1,13 +1,13 @@
 import hashlib
-import os
+#import os
 from PIL import Image
 
 def main():
 	aurkitua = False
 	
 	#for argazkia in os.listdir("/home/..."):
-		#ruta = os.path.join("/home/jon/1.Laborategia/irudia", argazkia)
-		ruta = ("/home/jon/1.Laborategia/irudia", argazkia)
+		#ruta = os.path.join("/home/diego/azterketaproba/irudia", argazkia)
+		ruta = ("/home/lsi/1.Laborategia/irudia", argazkia)
 		if argazkia.endswith('.jpg'):
 			with open(ruta, 'rb') as izena:
 				edukia = izena.read()
@@ -18,18 +18,6 @@ def main():
 				aurkitua = True
 				print("Zure irudia aurkitu da: ", argazkia)
 				
-					
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__": 
