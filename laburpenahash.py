@@ -5,11 +5,12 @@ from PIL import Image
 def main():
 	aurkitua = False
 	
-	for argazkia in os.listdir("/home/jon/1.Laborategia/irudia"):
-		ruta = os.path.join("/home/jon/1.Laborategia/irudia", argazkia)
+	#for argazkia in os.listdir("/home/..."):
+		#ruta = os.path.join("/home/jon/1.Laborategia/irudia", argazkia)
+		ruta = ("/home/jon/1.Laborategia/irudia", argazkia)
 		if argazkia.endswith('.jpg'):
-			with open(ruta, 'rb') as artxiboa:
-				edukia = artxiboa.read()
+			with open(ruta, 'rb') as izena:
+				edukia = izena.read()
 			hash_obj = hashlib.md5()
 			hash_obj.update(edukia)
 			hash_emaitza = hash_obj.hexdigest()
