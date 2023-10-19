@@ -13,7 +13,7 @@ def main():
             hash_obj = hashlib.md5()
             hash_obj.update(edukia)
             hash_emaitza = hash_obj.hexdigest()
-            if hash_emaitza == "e5ed313192776744b9b93b1320b5e268":
+            if hash_emaitza == "68745799f23dadff063fbd02bd38b547":
                 aurkitua = True
                 print("Zure irudia aurkitu da:", argazkia)
 
