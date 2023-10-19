@@ -5,8 +5,8 @@ from PIL import Image
 def main():
 	aurkitua = False
 	
-	for argazkia in os.listdir("/Descargas/irudia"):
-		ruta = os.path.join("/Descargas/irudia", argazkia)
+	for argazkia in os.listdir("/home/diego/Descargas/irudia"):
+		ruta = os.path.join("/home/diego/Descargas/irudia", argazkia)
 		ruta = ("/home/lsi/1.Laborategia/irudia", argazkia)
 		if argazkia.endswith('.jpg'):
 			with open(ruta, 'rb') as izena:
