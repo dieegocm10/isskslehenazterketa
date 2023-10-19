@@ -5,8 +5,8 @@ def main():
     aurkitua = False
     carpeta_irudia = "/home/diego/Descargas/irudia"
 
-    for argazkia in os.listdir(carpeta_irudia):
-        ruta = os.path.join(carpeta_irudia, argazkia)
+    for argazkia in os.listdir("/home/diego/Descargas/irudia"):
+        ruta = os.path.join("/home/diego/Descargas/irudia", argazkia)
         if argazkia.endswith('.jpg'):
             with open(ruta, 'rb') as izena:
                 edukia = izena.read()
