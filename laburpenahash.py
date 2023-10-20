@@ -1,24 +1,18 @@
 import hashlib
 import os
+from PIL import Image
 
-def main():
-    aurkitua = False
-    carpeta_irudia = "/home/diego/Descargas/irudia"
+for foto in os.listdir("/home/diego/Descargas/irudia"):
+    ruta_completa = os.path.join("/home/diego/Descargas/irudia", foto)
+    if foto.endswith('.jpg'):
+        try:
+            with open(ruta_completa, 'rb') as archivo:
+                contenido = archivo.read()
 
-    for argazkia in os.listdir("/home/diego/Descargas/irudia"):
-        ruta = os.path.join("/home/diego/Descargas/irudia", argazkia)
-        if argazkia.endswith('.jpg'):
-            with open(ruta, 'rb') as izena:
-                edukia = izena.read()
             hash_obj = hashlib.md5()
-            hash_obj.update(edukia)
-            hash_emaitza = hash_obj.hexdigest()
-            if hash_emaitza == "68745799f23dadff063fbd02bd38b547":
-                aurkitua = True
-                print("Zure irudia aurkitu da:", argazkia)
-
-    if not aurkitua:
-        print("Ez da zure irudirik aurkitu.")
-
-if __name__ == "__main":
-    main()
+            hash_obj.update(contenido)
+            hash_resultado = hash_obj.hexdigest()
+            if hash_resultado == "e5ed313192776744b9b93b1320b5e268":
+                print(f'Archivo JPG encontrado: {foto} ')
+        except Exception as e:
+            print(f'Error al abrir {foto}: {e}')
