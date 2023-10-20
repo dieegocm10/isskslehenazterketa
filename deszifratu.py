@@ -1,4 +1,4 @@
-contador = {}
+contador = {} 
 porcentajes_calculados = {}
 porcentajes_introducidos = {}
 letras_cambiadas = {}
