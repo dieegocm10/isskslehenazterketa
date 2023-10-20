@@ -6,7 +6,7 @@ def main():
     kont = 1
     aurkituta = False
     while not aurkituta:
-        irudiaPath = os.path.join(os.getcwd(), "irudia", "imagen" + str(kont) + ".jpg")
+        irudiaPath = os.path.join("/home/diego/Descargas/irudia", "imagen" + str(kont) + ".jpg")
         print(f'{kont}. irudia:')
         print("Gordetako lekua: " + str(irudiaPath))
         with open(irudiaPath, 'rb') as artxiboa:
