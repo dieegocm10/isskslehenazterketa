@@ -2,17 +2,26 @@ import hashlib
 import os
 from PIL import Image
 
-for foto in os.listdir("/home/diego/Descargas/irudia"):
-    ruta_completa = os.path.join("/home/diego/Descargas/irudia", foto)
-    if foto.endswith('.jpg'):
-        try:
-            with open(ruta_completa, 'rb') as archivo:
-                contenido = archivo.read()
-
-            hash_obj = hashlib.md5()
-            hash_obj.update(contenido)
-            hash_resultado = hash_obj.hexdigest()
-            if hash_resultado == "e5ed313192776744b9b93b1320b5e268":
-                print(f'Archivo JPG encontrado: {foto} ')
-        except Exception as e:
-            print(f'Error al abrir {foto}: {e}')
+def main():
+	kont=1
+	aurkituta=False
+	while aurkituta==False:
+		irudiaPath= str(os.getcwd()) + "/home/diego/Descargas/irudia" + str(kont) + ".jpg"
+		print(f'{kont}. irudia:')
+		print("Gordetako lekua: " + str(irudiaPath))
+		with open(irudiaPath, 'rb') as artxiboa:
+                	edukia = artxiboa.read()
+		hash_obj = hashlib.md5()
+		hash_obj.update(edukia)
+		result=hash_obj.hexdigest()
+		print("Laburpena: " + str(result))
+		if result == "e5ed313192776744b9b93b1320b5e268":
+			aurkituta=True
+			print("Irudia hau irudi egokia izan da")
+		else:
+			
+			kont += 1
+			print("Irudia hau ez da irudi egokia")
+            
+if __name__ == "__main__":
+	main()
