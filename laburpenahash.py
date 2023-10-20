@@ -6,7 +6,7 @@ def main():
 	kont=1
 	aurkituta=False
 	while aurkituta==False:
-		irudiaPath= str(os.getcwd()) + "/home/diego/Descargas/irudia" + str(kont) + ".jpg"
+		irudiaPath= str(os.getcwd()) + "/irudia/imagen" + str(kont) + ".jpg"
 		print(f'{kont}. irudia:')
 		print("Gordetako lekua: " + str(irudiaPath))
 		with open(irudiaPath, 'rb') as artxiboa:
